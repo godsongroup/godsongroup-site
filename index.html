@@ -10,115 +10,107 @@
 <style>
 
 body{
-    margin:0;
-    background:#000;
-    font-family:Arial,sans-serif;
-    text-align:center;
-    color:white;
-}
-
-.hero{
-    padding:20px;
+margin:0;
+background:black;
+font-family:Arial;
+text-align:center;
+color:#8f6b3d;
 }
 
 .logo{
-    width:100%;
-    max-width:550px;
-    border-radius:25px;
-    box-shadow:0 0 40px #8f6b3d;
-    margin-top:20px;
+width:100%;
+max-width:500px;
+border-bottom-left-radius:30px;
+border-bottom-right-radius:30px;
 }
 
 h1{
-    font-size:70px;
-    color:#8f6b3d;
-    margin-top:30px;
-    margin-bottom:10px;
+font-size:70px;
+margin-top:30px;
+margin-bottom:10px;
+color:#8f6b3d;
 }
 
 .subtitle{
-    font-size:28px;
-    color:#d5d5d5;
-    line-height:1.6;
-    max-width:900px;
-    margin:auto;
+font-size:30px;
+color:white;
+line-height:1.6;
+padding:10px;
 }
 
-.about{
-    margin-top:50px;
-    padding:30px;
-    background:#111;
-    border-radius:25px;
-    width:90%;
-    max-width:900px;
-    margin-left:auto;
-    margin-right:auto;
-    box-shadow:0 0 20px rgba(143,107,61,0.3);
+h2{
+font-size:45px;
+margin-top:40px;
+color:#8f6b3d;
 }
 
-.about h2{
-    color:#8f6b3d;
-    font-size:40px;
-}
-
-.about p{
-    font-size:24px;
-    line-height:2;
-    color:#f2f2f2;
+.services{
+font-size:30px;
+line-height:2;
+color:white;
+padding:20px;
 }
 
 .btn{
-    display:block;
-    width:80%;
-    max-width:450px;
-    margin:20px auto;
-    padding:20px;
-    border-radius:18px;
-    text-decoration:none;
-    font-size:28px;
-    font-weight:bold;
+display:block;
+width:80%;
+max-width:400px;
+margin:20px auto;
+padding:20px;
+border-radius:20px;
+text-decoration:none;
+font-size:30px;
+font-weight:bold;
 }
 
 .call{
-    background:#8f6b3d;
-    color:black;
+background:#8f6b3d;
+color:black;
 }
 
 .whatsapp{
-    background:#25D366;
-    color:white;
-}
-
-.viber{
-    background:#7360F2;
-    color:white;
-}
-
-.telegram{
-    background:#229ED9;
-    color:white;
-}
-
-.instagram{
-    background:#E1306C;
-    color:white;
+background:#25D366;
+color:white;
 }
 
 .facebook{
-    background:#1877F2;
-    color:white;
+background:#1877F2;
+color:white;
+}
+
+.instagram{
+background:#E1306C;
+color:white;
 }
 
 .tiktok{
-    background:white;
-    color:black;
+background:#111;
+color:white;
+border:2px solid white;
 }
 
-.footer{
-    margin-top:60px;
-    padding:30px;
-    color:gray;
-    font-size:18px;
+.telegram{
+background:#229ED9;
+color:white;
+}
+
+.gallery{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+padding:20px;
+}
+
+.gallery img{
+width:300px;
+border-radius:20px;
+}
+
+video{
+width:90%;
+border-radius:20px;
+margin-bottom:40px;
 }
 
 </style>
@@ -126,26 +118,24 @@ h1{
 
 <body>
 
-<div class="hero">
-
 <img src="bg.png" class="logo">
 
 <h1>GODSON GROUP</h1>
 
 <p class="subtitle">
-თანამედროვე დიზაინი • პრემიუმ ხარისხი • პროფესიონალური ბრიგადა <br><br>
-Enjoy Quality And Price • Насолоджуйтесь Якістю Та Ціною
+რემონტი • დიზაინი • მშენებლობა
 </p>
 
-<div class="about">
+<h2>ჩვენი სერვისები</h2>
 
-<h2>ჩვენ შესახებ</h2>
+<div class="services">
 
-<p>
-ჩვენ ვქმნით თანამედროვე, კომფორტულ და ელეგანტურ სივრცეებს.
-GODSON GROUP აერთიანებს გამოცდილებას, ხარისხს და თანამედროვე ხედვას,
-რათა თითოეული პროექტი შესრულდეს მაღალი სტანდარტით.
-</p>
+✔ კაფელ-მეტლახი <br>
+✔ ელექტრობა <br>
+✔ გიფსოკარდონი <br>
+✔ ლამინატი <br>
+✔ შპალერი <br>
+✔ სრული რემონტი <br>
 
 </div>
 
@@ -154,76 +144,50 @@ GODSON GROUP აერთიანებს გამოცდილებას
 </a>
 
 <a href="https://wa.me/995599759795" class="btn whatsapp">
-WhatsApp
-</a>
-
-<a href="viber://chat?number=%2B995599759795" class="btn viber">
-Viber
-</a>
-
-<a href="https://t.me/godsongroup" class="btn telegram">
-Telegram
-</a>
-
-<a href="https://www.instagram.com/rm.build.group?igsh=MTJ6dXpsOWtnYjh1Mw==" class="btn instagram">
-Instagram
+💬 WhatsApp
 </a>
 
 <a href="https://www.facebook.com/share/1BFNErVzEz/" class="btn facebook">
-Facebook
+📘 Facebook
+</a>
+
+<a href="https://www.instagram.com/rm.build.group?igsh=MTJ6dXpsOWtnYjh1Mw==" class="btn instagram">
+📸 Instagram
 </a>
 
 <a href="https://www.tiktok.com/@rmremont?_r=1&_t=ZS-96aTj6ZzuWi" class="btn tiktok">
-TikTok
+🎵 TikTok
 </a>
 
-<div class="footer">
-GODSON GROUP © 2026 • Batumi, Georgia
-</div>
+<a href="https://t.me/godsongroup" class="btn telegram">
+✈ Telegram
+</a>
+
+<h2>📸 ჩვენი ნამუშევრები</h2>
+
+<div class="gallery">
+
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+<img src="photo4.jpg">
+<img src="photo5.jpg">
+<img src="photo6.jpg">
+<img src="photo7.jpg">
+<img src="photo8.jpg">
+<img src="photo9.jpg">
+<img src="photo10.jpg">
+<img src="photo11.jpg">
+<img src="photo12.jpg">
+<img src="photo13.jpg">
+<img src="photo14.jpg">
 
 </div>
+
+<h2>🎬 ვიდეო</h2>
+
+<video controls>
+<source src="video11.mp4" type="video/mp4">
+</video>
 
 </body>
 </html>
-<div class="about">
-
-<h2>ჩვენი ნამუშევრები</h2>
-<video controls style="width:90%;max-width:700px;border-radius:20px;">
-<source src="video11.mp4" type="video/mp4">
-</video>
-<vi
-<h2 style="color:#8f6b3d; margin-top:50px;">
-📸 ჩვენი ნამუშევრები
-</h2>
-
-<div style="
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:15px;
-padding:20px;
-">
-
-<img src="photo2.jpg" style="width:300px;border-radius:15px;">
-<img src="photo3.jpg" style="width:300px;border-radius:15px;">
-<img src="photo4.jpg" style="width:300px;border-radius:15px;">
-<img src="photo5.jpg" style="width:300px;border-radius:15px;">
-<img src="photo6.jpg" style="width:300px;border-radius:15px;">
-<img src="photo7.jpg" style="width:300px;border-radius:15px;">
-<img src="photo8.jpg" style="width:300px;border-radius:15px;">
-<img src="photo9.jpg" style="width:300px;border-radius:15px;">
-<img src="photo10.jpg" style="width:300px;border-radius:15px;">
-<img src="photo11.jpg" style="width:300px;border-radius:15px;">
-<img src="photo12.jpg" style="width:300px;border-radius:15px;">
-<img src="photo13.jpg" style="width:300px;border-radius:15px;">
-<img src="photo14.jpg" style="width:300px;border-radius:15px;">
-
-</div>
-
-<h2 style="color:#8f6b3d;">
-🎬 ვიდეო
-</h2>
-
-<video width="90%" controls style="border-radius:20px;">
-<source src="video11.mp4" type="video/mp4">
-</video>
