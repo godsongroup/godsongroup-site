@@ -10,110 +10,105 @@
 
 body{
 margin:0;
-background:black;
+background:#000;
 font-family:Arial,sans-serif;
-text-align:center;
 color:white;
+text-align:center;
 }
 
-.logo{
-width:100%;
-max-width:500px;
-display:block;
-margin:auto;
-border-radius:0 0 30px 30px;
+header{
+padding:40px 20px;
+background:url('bg.png') center/cover no-repeat;
 }
 
-.title{
-font-size:55px;
-font-weight:bold;
-color:#8f6b3d;
-margin-top:20px;
+.overlay{
+background:rgba(0,0,0,0.7);
+padding:40px 20px;
+border-radius:20px;
 }
 
-.subtitle{
-font-size:26px;
-padding:10px 20px;
-line-height:1.6;
+h1{
+font-size:60px;
+color:#d4af37;
+margin:0;
+}
+
+h2{
+color:#d4af37;
+margin-top:40px;
+font-size:35px;
+}
+
+p{
+font-size:22px;
+line-height:1.7;
 }
 
 .services{
-font-size:24px;
-line-height:2;
+max-width:800px;
+margin:auto;
 padding:20px;
 }
 
-.gallery-title,
-.video-title,
-.contact-title{
-color:#8f6b3d;
-font-size:35px;
-margin-top:30px;
-}
-
-.gallery{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:12px;
-padding:15px;
-}
-
-.gallery img{
-width:100%;
-border-radius:18px;
-object-fit:cover;
-}
-
-.video{
-width:90%;
-border-radius:20px;
-margin-top:20px;
+.service-box{
 background:#111;
+margin:15px;
+padding:20px;
+border-radius:20px;
+font-size:24px;
+border:2px solid #d4af37;
+}
+
+.buttons{
+padding:20px;
 }
 
 .btn{
 display:block;
-margin:15px 20px;
+width:85%;
+max-width:500px;
+margin:15px auto;
 padding:18px;
-border-radius:18px;
 font-size:28px;
 font-weight:bold;
 text-decoration:none;
+border-radius:15px;
 color:white;
 }
 
-.call{
-background:#8f6b3d;
-color:black;
+.call{background:#8b6b3f;}
+.whatsapp{background:#25D366;}
+.viber{background:#7360F2;}
+.telegram{background:#229ED9;}
+.instagram{background:#E1306C;}
+.facebook{background:#1877F2;}
+.tiktok{background:#111;border:2px solid white;}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+gap:15px;
+padding:20px;
 }
 
-.whatsapp{
-background:#25D366;
+.gallery img{
+width:100%;
+border-radius:20px;
+border:3px solid #d4af37;
 }
 
-.viber{
-background:#7360F2;
+video{
+width:90%;
+max-width:700px;
+border-radius:20px;
+margin:20px auto;
+border:3px solid #d4af37;
 }
 
-.telegram{
-background:#229ED9;
-}
-
-.instagram{
-background:#E1306C;
-}
-
-.facebook{
-background:#1877F2;
-}
-
-.tiktok{
-background:#111;
-border:2px solid white;
-}
-
-.footer-space{
-height:40px;
+footer{
+padding:30px;
+font-size:18px;
+color:#aaa;
 }
 
 </style>
@@ -121,30 +116,50 @@ height:40px;
 
 <body>
 
-<img src="bg.png" class="logo">
+<header>
+<div class="overlay">
 
-<div class="title">
-GODSON GROUP
-</div>
+<h1>GODSON GROUP</h1>
 
-<div class="subtitle">
+<p>
 რემონტი • დიზაინი • მშენებლობა
-</div>
-
-<div class="services">
-
-✅ თანამედროვე ინტერიერი <br>
-✅ პრემიუმ ხარისხი <br>
-✅ ელექტრობა <br>
-✅ გიფსოკარდონი <br>
-✅ ლამინატი <br>
-✅ სრული რემონტი
+</p>
 
 </div>
+</header>
 
-<h2 class="gallery-title">
-📸 ჩვენი ნამუშევრები
-</h2>
+<section class="services">
+
+<h2>ჩვენი სერვისები</h2>
+
+<div class="service-box">✔ პრემიუმ რემონტი</div>
+<div class="service-box">✔ ინტერიერის დიზაინი</div>
+<div class="service-box">✔ აბაზანის და სამზარეულოს მოწყობა</div>
+<div class="service-box">✔ ელექტროობა და განათება</div>
+<div class="service-box">✔ გიფსოკარდონი და შეღებვა</div>
+<div class="service-box">✔ სრული ბინის განახლება</div>
+
+</section>
+
+<div class="buttons">
+
+<a class="btn call" href="tel:+995599759795">📞 დარეკვა</a>
+
+<a class="btn whatsapp" href="https://wa.me/995599759795">💬 WhatsApp</a>
+
+<a class="btn viber" href="viber://chat?number=%2B995599759795">📱 Viber</a>
+
+<a class="btn telegram" href="https://t.me/godsongroup">✈ Telegram</a>
+
+<a class="btn instagram" href="https://www.instagram.com/rm.build.group?igsh=MTJ6dXpsOWtnYjh1Mw==">📸 Instagram</a>
+
+<a class="btn facebook" href="https://www.facebook.com/share/1BFNErVzEz/">📘 Facebook</a>
+
+<a class="btn tiktok" href="https://www.tiktok.com/@rmremont?_r=1&_t=ZS-96aTj6ZzuWi">🎵 TikTok</a>
+
+</div>
+
+<h2>📸 ჩვენი ნამუშევრები</h2>
 
 <div class="gallery">
 
@@ -164,53 +179,22 @@ GODSON GROUP
 
 </div>
 
-<h2 class="video-title">
-🎬 ვიდეოები
-</h2>
+<h2>🎬 ვიდეოები</h2>
 
-<video class="video" controls>
+<video controls>
 <source src="video11.mp4" type="video/mp4">
 </video>
 
-<br><br>
-
-<video class="video" controls>
+<video controls>
 <source src="video2.mp4" type="video/mp4">
 </video>
 
-<h2 class="contact-title">
-📞 კონტაქტი
-</h2>
+<footer>
 
-<a href="tel:+995599759795" class="btn call">
-📞 დარეკვა
-</a>
+GODSON GROUP © 2026  
+ყველა უფლება დაცულია
 
-<a href="https://wa.me/995599759795" class="btn whatsapp">
-💬 WhatsApp
-</a>
-
-<a href="viber://chat?number=%2B995599759795" class="btn viber">
-📱 Viber
-</a>
-
-<a href="https://t.me/godsongroup" class="btn telegram">
-✈️ Telegram
-</a>
-
-<a href="https://www.instagram.com/rm.build.group" class="btn instagram">
-📸 Instagram
-</a>
-
-<a href="https://www.facebook.com/share/1BFNErVzEz/" class="btn facebook">
-📘 Facebook
-</a>
-
-<a href="https://www.tiktok.com/@rmremont" class="btn tiktok">
-🎵 TikTok
-</a>
-
-<div class="footer-space"></div>
+</footer>
 
 </body>
 </html>
