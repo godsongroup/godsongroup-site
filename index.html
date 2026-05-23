@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>GODSON GROUP</title>
 
 <style>
@@ -12,79 +11,102 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
 }
 
 body{
-background:#111;
+font-family:Arial,sans-serif;
+background:url('bg.png');
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
 color:white;
+text-align:center;
+}
+
+.overlay{
+background:rgba(0,0,0,0.85);
+min-height:100vh;
+padding-bottom:50px;
 }
 
 header{
-padding:35px 15px;
-text-align:center;
-background:black;
-border-bottom:2px solid #8b6b3f;
+padding:50px 20px;
+animation:fade 2s ease;
 }
 
 header h1{
-font-size:42px;
+font-size:55px;
 color:#d4af37;
-margin-bottom:10px;
+text-shadow:0 0 20px gold;
+margin-bottom:15px;
 }
 
 header p{
-font-size:18px;
-color:#ccc;
+font-size:22px;
+color:#ddd;
+}
+
+.section-title{
+font-size:45px;
+color:#d4af37;
+margin:40px 0 25px;
+text-shadow:0 0 10px gold;
 }
 
 .gallery{
 display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:12px;
-padding:15px;
+grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+gap:15px;
+padding:20px;
 }
 
-.gallery img,
-.gallery video{
+.gallery img{
 width:100%;
-border-radius:18px;
+height:240px;
 object-fit:cover;
-box-shadow:0 0 12px rgba(0,0,0,0.5);
+border-radius:25px;
+border:3px solid #d4af37;
+transition:0.4s;
 }
 
-.section-title{
-text-align:center;
-font-size:32px;
-margin-top:25px;
-margin-bottom:10px;
-color:#d4af37;
+.gallery img:hover{
+transform:scale(1.05);
+box-shadow:0 0 25px gold;
+}
+
+.video-box{
+padding:20px;
+}
+
+.video-box video{
+width:95%;
+border-radius:25px;
+border:3px solid #d4af37;
 }
 
 .socials{
 padding:20px;
+display:flex;
+flex-direction:column;
+gap:15px;
 }
 
-.btn{
-display:block;
-width:90%;
-margin:14px auto;
+.socials a{
+text-decoration:none;
 padding:18px;
 border-radius:18px;
-font-size:22px;
+font-size:24px;
 font-weight:bold;
-text-decoration:none;
 color:white;
-text-align:center;
 transition:0.3s;
 }
 
-.btn:hover{
-transform:scale(1.03);
+.socials a:hover{
+transform:scale(1.05);
 }
 
-.phone{
-background:#9c7440;
+.call{
+background:#8b6b2e;
 }
 
 .whatsapp{
@@ -92,7 +114,7 @@ background:#25D366;
 }
 
 .viber{
-background:#7360F2;
+background:#7360f2;
 }
 
 .telegram{
@@ -109,14 +131,47 @@ background:#1877F2;
 
 .tiktok{
 background:black;
-border:2px solid white;
+}
+
+.floating{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+width:70px;
+height:70px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:38px;
+text-decoration:none;
+box-shadow:0 0 20px #25D366;
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.1);}
+100%{transform:scale(1);}
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(-40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 footer{
-text-align:center;
-padding:30px;
+margin-top:40px;
+padding:20px;
 font-size:18px;
-color:#999;
+color:#bbb;
 }
 
 </style>
@@ -124,91 +179,85 @@ color:#999;
 
 <body>
 
+<div class="overlay">
+
 <header>
-
 <h1>GODSON GROUP</h1>
-
-<p>
-სრული რემონტი • დიზაინი • მშენებლობა
-</p>
-
+<p>სრული რემონტი • დიზაინი • მშენებლობა</p>
 </header>
 
-<h2 class="section-title">
-📸 ჩვენი ნამუშევრები
-</h2>
+<h2 class="section-title">📸 ჩვენი ნამუშევრები</h2>
 
-<section class="gallery">
+<div class="gallery">
 
+<img src="photo1.jpg">
 <img src="photo2.jpg">
 <img src="photo3.jpg">
-
 <img src="photo4.jpg">
 <img src="photo5.jpg">
-
 <img src="photo6.jpg">
 <img src="photo7.jpg">
-
 <img src="photo8.jpg">
 <img src="photo9.jpg">
-
 <img src="photo10.jpg">
 <img src="photo11.jpg">
-
 <img src="photo12.jpg">
 <img src="photo13.jpg">
-
 <img src="photo14.jpg">
 
-<video controls>
-<source src="video11.mp4" type="video/mp4">
+</div>
+
+<h2 class="section-title">🎬 ვიდეო</h2>
+
+<div class="video-box">
+<video controls autoplay muted loop>
+<source src="video.mp4" type="video/mp4">
 </video>
+</div>
 
-<video controls>
-<source src="video2.mp4" type="video/mp4">
-</video>
+<h2 class="section-title">📞 კონტაქტი</h2>
 
-</section>
+<div class="socials">
 
-<h2 class="section-title">
-📞 კონტაქტი
-</h2>
-
-<section class="socials">
-
-<a class="btn phone" href="tel:+995599759795">
+<a class="call" href="tel:+995599759795">
 📞 დარეკვა
 </a>
 
-<a class="btn whatsapp" href="https://wa.me/995599759795">
+<a class="whatsapp" href="https://wa.me/995599759795">
 💬 WhatsApp
 </a>
 
-<a class="btn viber" href="viber://chat?number=+995599759795">
+<a class="viber" href="viber://chat?number=%2B995599759795">
 📱 Viber
 </a>
 
-<a class="btn telegram" href="https://t.me/godsongroup">
+<a class="telegram" href="https://t.me/godsongroup">
 ✈ Telegram
 </a>
 
-<a class="btn instagram" href="https://www.instagram.com/rm.build.group?igsh=MTJ6dXpsOWtnYjh1Mw==">
+<a class="instagram" href="https://instagram.com/godsongroup">
 📸 Instagram
 </a>
 
-<a class="btn facebook" href="https://www.facebook.com/share/1BFNErVzEz/">
+<a class="facebook" href="https://facebook.com/godsongroup">
 📘 Facebook
 </a>
 
-<a class="btn tiktok" href="https://www.tiktok.com/@rmremont?_r=1&_t=ZS-96aTj6ZzuWi">
+<a class="tiktok" href="https://tiktok.com/@godsongroup">
 🎵 TikTok
 </a>
 
-</section>
+</div>
 
 <footer>
-GODSON GROUP © 2026
+© GODSON GROUP 2026
 </footer>
+
+</div>
+
+<a class="floating" href="https://wa.me/995599759795">
+💬
+</a>
 
 </body>
 </html>
