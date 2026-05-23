@@ -10,79 +10,27 @@
 
 body{
 margin:0;
-background:#000;
+background:black;
 font-family:Arial,sans-serif;
 color:white;
 text-align:center;
 }
 
-header{
-padding:40px 20px;
-background:url('bg.png') center/cover no-repeat;
+.header{
+padding:30px 20px;
+background:linear-gradient(45deg,#111,#333);
 }
 
-.overlay{
-background:rgba(0,0,0,0.7);
-padding:40px 20px;
-border-radius:20px;
-}
-
-h1{
-font-size:60px;
-color:#d4af37;
+.header h1{
+font-size:40px;
 margin:0;
-}
-
-h2{
 color:#d4af37;
-margin-top:40px;
-font-size:35px;
 }
 
-p{
-font-size:22px;
-line-height:1.7;
+.header p{
+font-size:18px;
+color:#ccc;
 }
-
-.services{
-max-width:800px;
-margin:auto;
-padding:20px;
-}
-
-.service-box{
-background:#111;
-margin:15px;
-padding:20px;
-border-radius:20px;
-font-size:24px;
-border:2px solid #d4af37;
-}
-
-.buttons{
-padding:20px;
-}
-
-.btn{
-display:block;
-width:85%;
-max-width:500px;
-margin:15px auto;
-padding:18px;
-font-size:28px;
-font-weight:bold;
-text-decoration:none;
-border-radius:15px;
-color:white;
-}
-
-.call{background:#8b6b3f;}
-.whatsapp{background:#25D366;}
-.viber{background:#7360F2;}
-.telegram{background:#229ED9;}
-.instagram{background:#E1306C;}
-.facebook{background:#1877F2;}
-.tiktok{background:#111;border:2px solid white;}
 
 .gallery{
 display:grid;
@@ -94,72 +42,53 @@ padding:20px;
 .gallery img{
 width:100%;
 border-radius:20px;
-border:3px solid #d4af37;
+box-shadow:0 0 15px rgba(255,255,255,0.2);
+}
+
+.video{
+padding:20px;
 }
 
 video{
-width:90%;
-max-width:700px;
+width:95%;
 border-radius:20px;
-margin:20px auto;
-border:3px solid #d4af37;
+margin-top:20px;
 }
 
-footer{
-padding:30px;
-font-size:18px;
-color:#aaa;
+.contacts{
+padding:20px;
 }
+
+.btn{
+display:block;
+margin:15px auto;
+padding:18px;
+width:85%;
+max-width:400px;
+border-radius:15px;
+font-size:24px;
+font-weight:bold;
+color:white;
+text-decoration:none;
+}
+
+.phone{background:#8B6B3F;}
+.whatsapp{background:#25D366;}
+.viber{background:#7360F2;}
+.telegram{background:#229ED9;}
+.instagram{background:#E1306C;}
+.facebook{background:#1877F2;}
+.tiktok{background:#111;}
 
 </style>
 </head>
 
 <body>
 
-<header>
-<div class="overlay">
-
+<div class="header">
 <h1>GODSON GROUP</h1>
-
-<p>
-რემონტი • დიზაინი • მშენებლობა
-</p>
-
+<p>რემონტი • დიზაინი • მშენებლობა</p>
 </div>
-</header>
-
-<section class="services">
-
-<h2>ჩვენი სერვისები</h2>
-
-<div class="service-box">✔ პრემიუმ რემონტი</div>
-<div class="service-box">✔ ინტერიერის დიზაინი</div>
-<div class="service-box">✔ აბაზანის და სამზარეულოს მოწყობა</div>
-<div class="service-box">✔ ელექტროობა და განათება</div>
-<div class="service-box">✔ გიფსოკარდონი და შეღებვა</div>
-<div class="service-box">✔ სრული ბინის განახლება</div>
-
-</section>
-
-<div class="buttons">
-
-<a class="btn call" href="tel:+995599759795">📞 დარეკვა</a>
-
-<a class="btn whatsapp" href="https://wa.me/995599759795">💬 WhatsApp</a>
-
-<a class="btn viber" href="viber://chat?number=%2B995599759795">📱 Viber</a>
-
-<a class="btn telegram" href="https://t.me/godsongroup">✈ Telegram</a>
-
-<a class="btn instagram" href="https://www.instagram.com/rm.build.group?igsh=MTJ6dXpsOWtnYjh1Mw==">📸 Instagram</a>
-
-<a class="btn facebook" href="https://www.facebook.com/share/1BFNErVzEz/">📘 Facebook</a>
-
-<a class="btn tiktok" href="https://www.tiktok.com/@rmremont?_r=1&_t=ZS-96aTj6ZzuWi">🎵 TikTok</a>
-
-</div>
-
-<h2>📸 ჩვენი ნამუშევრები</h2>
 
 <div class="gallery">
 
@@ -179,6 +108,8 @@ color:#aaa;
 
 </div>
 
+<div class="video">
+
 <h2>🎬 ვიდეოები</h2>
 
 <video controls>
@@ -189,12 +120,27 @@ color:#aaa;
 <source src="video2.mp4" type="video/mp4">
 </video>
 
-<footer>
+</div>
 
-GODSON GROUP © 2026  
-ყველა უფლება დაცულია
+<div class="contacts">
 
-</footer>
+<h2>📞 კონტაქტი</h2>
+
+<a class="btn phone" href="tel:+995514888865">📞 დარეკვა</a>
+
+<a class="btn whatsapp" href="https://wa.me/995514888865">💬 WhatsApp</a>
+
+<a class="btn viber" href="#">📱 Viber</a>
+
+<a class="btn telegram" href="#">✈️ Telegram</a>
+
+<a class="btn instagram" href="#">📸 Instagram</a>
+
+<a class="btn facebook" href="#">📘 Facebook</a>
+
+<a class="btn tiktok" href="#">🎵 TikTok</a>
+
+</div>
 
 </body>
 </html>
