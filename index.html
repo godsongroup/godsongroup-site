@@ -25,31 +25,34 @@ text-align:center;
 }
 
 .overlay{
-background:rgba(0,0,0,0.82);
+background:rgba(0,0,0,0.83);
 min-height:100vh;
 padding-bottom:50px;
 }
 
 header{
 padding:50px 20px;
+animation:fade 2s ease;
 }
 
 header h1{
-font-size:55px;
+font-size:58px;
 color:#d4af37;
-text-shadow:0 0 15px gold;
+text-shadow:0 0 20px gold;
 margin-bottom:15px;
 }
 
 header p{
-font-size:22px;
+font-size:23px;
 color:#ddd;
+line-height:1.6;
 }
 
 .section-title{
-font-size:40px;
+font-size:42px;
+margin-top:40px;
+margin-bottom:25px;
 color:#d4af37;
-margin:35px 0 20px;
 text-shadow:0 0 10px gold;
 }
 
@@ -62,7 +65,7 @@ padding:20px;
 
 .gallery img{
 width:100%;
-height:230px;
+height:240px;
 object-fit:cover;
 border-radius:25px;
 border:3px solid #d4af37;
@@ -82,7 +85,19 @@ padding:20px;
 width:95%;
 border-radius:25px;
 border:3px solid #d4af37;
-margin-bottom:20px;
+margin-bottom:25px;
+background:black;
+}
+
+.youtube-frame{
+padding:20px;
+}
+
+.youtube-frame iframe{
+width:95%;
+height:260px;
+border-radius:25px;
+border:3px solid #ff0000;
 }
 
 .socials{
@@ -108,7 +123,7 @@ transform:scale(1.05);
 }
 
 .call{
-background:#8b6b2e;
+background:#9c7440;
 }
 
 .whatsapp{
@@ -131,6 +146,10 @@ background:#E1306C;
 background:#1877F2;
 }
 
+.youtube{
+background:#ff0000;
+}
+
 .tiktok{
 background:black;
 border:2px solid white;
@@ -147,8 +166,8 @@ align-items:center;
 justify-content:center;
 font-size:36px;
 text-decoration:none;
-box-shadow:0 0 20px rgba(0,0,0,0.6);
 z-index:999;
+box-shadow:0 0 20px rgba(0,0,0,0.5);
 animation:pulse 2s infinite;
 }
 
@@ -168,6 +187,17 @@ color:black;
 0%{transform:scale(1);}
 50%{transform:scale(1.1);}
 100%{transform:scale(1);}
+}
+
+@keyframes fade{
+from{
+opacity:0;
+transform:translateY(-40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 footer{
@@ -223,13 +253,28 @@ color:#bbb;
 
 <div class="video-box">
 
-<video controls autoplay muted loop>
+<video controls playsinline preload="metadata">
 <source src="video1.mp4" type="video/mp4">
 </video>
 
-<video controls>
+<video controls playsinline preload="metadata">
 <source src="video2.mp4" type="video/mp4">
 </video>
+
+</div>
+
+<h2 class="section-title">
+▶ YouTube
+</h2>
+
+<div class="youtube-frame">
+
+<iframe
+src="https://www.youtube.com/embed?listType=user_uploads&list=godsongroup"
+title="YouTube video player"
+frameborder="0"
+allowfullscreen>
+</iframe>
 
 </div>
 
@@ -255,16 +300,24 @@ color:#bbb;
 ✈ Telegram — @godsongroup
 </a>
 
-<a class="instagram" href="https://www.instagram.com/rm.build.group?igsh=MTJ6dXpsOWtnYjh1Mw==">
-📸 Instagram — rm.build.group
+<a class="instagram"
+href="https://www.instagram.com/rm.build.group?igsh=MTJ6dXpsOWtnYjh1Mw==">
+📸 Instagram
 </a>
 
-<a class="facebook" href="https://www.facebook.com/share/1BFNErVzEz/">
+<a class="facebook"
+href="https://www.facebook.com/share/1BFNErVzEz/">
 📘 Facebook
 </a>
 
-<a class="tiktok" href="https://www.tiktok.com/@rmremont?_r=1&_t=ZS-96aTj6ZzuWi">
-🎵 TikTok — @rmremont
+<a class="youtube"
+href="https://youtube.com/@godsongroup?si=H8vXZ1ZkKP0sAxIY">
+▶ YouTube
+</a>
+
+<a class="tiktok"
+href="https://www.tiktok.com/@rmremont?_r=1&_t=ZS-96aTj6ZzuWi">
+🎵 TikTok
 </a>
 
 </div>
@@ -277,11 +330,13 @@ color:#bbb;
 
 <!-- FLOATING BUTTONS -->
 
-<a href="https://wa.me/995599759795" class="float float-whatsapp">
+<a href="https://wa.me/995599759795"
+class="float float-whatsapp">
 💬
 </a>
 
-<a href="tel:+995599759795" class="float float-phone">
+<a href="tel:+995599759795"
+class="float float-phone">
 📞
 </a>
 
