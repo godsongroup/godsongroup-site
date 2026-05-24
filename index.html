@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ka">
 <head>
@@ -6,7 +7,6 @@
 <title>GODSON GROUP</title>
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -14,7 +14,7 @@ box-sizing:border-box;
 }
 
 body{
-font-family:Arial,sans-serif;
+font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 background:url('bg.png');
 background-size:cover;
 background-position:center;
@@ -30,136 +30,147 @@ padding-bottom:50px;
 }
 
 header{
-padding:50px 20px;
-animation:fade 2s ease;
+padding:60px 20px 30px;
+animation:fade 1.5s ease;
 }
 
 header h1{
-font-size:55px;
+font-size:45px;
 color:#d4af37;
-text-shadow:0 0 20px gold;
+text-shadow:0 0 20px rgba(212, 175, 55, 0.6);
 margin-bottom:15px;
+letter-spacing: 2px;
 }
 
 header p{
-font-size:22px;
+font-size:20px;
 color:#ddd;
+font-weight: 300;
 }
 
 .section-title{
-font-size:45px;
+font-size:32px;
 color:#d4af37;
-margin:40px 0 25px;
-text-shadow:0 0 10px gold;
+margin:50px 0 25px;
+text-shadow:0 0 10px rgba(212, 175, 55, 0.4);
 }
 
+/* გალერეის დახვეწა */
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
-gap:15px;
-padding:20px;
+grid-template-columns:repeat(auto-fit,minmax(150px, 1fr));
+gap:12px;
+padding:0 20px;
+max-width: 1000px;
+margin: 0 auto;
 }
 
 .gallery img{
 width:100%;
-height:240px;
+height:200px;
 object-fit:cover;
-border-radius:25px;
-border:3px solid #d4af37;
-transition:0.4s;
+border-radius:18px;
+border:2px solid rgba(212, 175, 55, 0.5);
+transition:0.4s ease;
+cursor: pointer;
 }
 
 .gallery img:hover{
 transform:scale(1.05);
-box-shadow:0 0 25px gold;
+box-shadow:0 0 20px #d4af37;
+border-color: #d4af37;
 }
 
+/* ვიდეოს კონტეინერის გასწორება დესკტოპისთვის */
 .video-box{
 padding:20px;
+max-width: 700px;
+margin: 0 auto;
 }
 
 .video-box video{
-width:95%;
-border-radius:25px;
-border:3px solid #d4af37;
+width:100%;
+border-radius:18px;
+border:2px solid #d4af37;
+box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
+/* სოციალურების გასწორება - რომ ეკრანზე არ გაიწელოს */
 .socials{
 padding:20px;
 display:flex;
 flex-direction:column;
 gap:15px;
+max-width: 480px;
+margin: 0 auto;
 }
 
 .socials a{
 text-decoration:none;
-padding:18px;
-border-radius:18px;
-font-size:24px;
+padding:16px;
+border-radius:14px;
+font-size:20px;
 font-weight:bold;
 color:white;
-transition:0.3s;
+transition:0.3s ease;
+box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
 }
 
 .socials a:hover{
-transform:scale(1.05);
+transform:translateY(-3px);
+box-shadow: 0 8px 25px rgba(0,0,0,0.4);
 }
 
-.call{
-background:#8b6b2e;
-}
+.call{ background:#8b6b2e; }
+.whatsapp{ background:#25D366; }
+.viber{ background:#7360f2; }
+.telegram{ background:#229ED9; }
+.instagram{ background:#E1306C; }
+.facebook{ background:#1877F2; }
+.tiktok{ background:#000000; border: 1px solid #333;}
 
-.whatsapp{
-background:#25D366;
-}
-
-.viber{
-background:#7360f2;
-}
-
-.telegram{
-background:#229ED9;
-}
-
-.instagram{
-background:#E1306C;
-}
-
-.facebook{
-background:#1877F2;
-}
-
-.tiktok{
-background:black;
-}
-
+/* მცურავი ღილაკის გაუმჯობესებული ანიმაცია */
 .floating{
 position:fixed;
-bottom:20px;
-right:20px;
+bottom:25px;
+right:25px;
 background:#25D366;
-width:70px;
-height:70px;
+width:65px;
+height:65px;
 border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:38px;
+font-size:32px;
 text-decoration:none;
-box-shadow:0 0 20px #25D366;
+box-shadow:0 0 20px rgba(37, 211, 102, 0.7);
 animation:pulse 2s infinite;
+z-index: 999;
 }
 
 @keyframes pulse{
-0%{transform:scale(1);}
-50%{transform:scale(1.1);}
-100%{transform:scale(1);}
+0%{
+    transform:scale(1);
+    box-shadow:0 0 15px rgba(37, 211, 102, 0.6);
+}
+50%{
+    transform:scale(1.08);
+    box-shadow:0 0 30px rgba(37, 211, 102, 0.9);
+}
+100%{
+    transform:scale(1);
+    box-shadow:0 0 15px rgba(37, 211, 102, 0.6);
+}
 }
 
 @keyframes fade{
 from{
 opacity:0;
-transform:translateY(-40px);
+transform:translateY(-20px);
 }
 to{
 opacity:1;
@@ -168,12 +179,21 @@ transform:translateY(0);
 }
 
 footer{
-margin-top:40px;
-padding:20px;
-font-size:18px;
-color:#bbb;
+margin-top:60px;
+padding:30px 20px;
+font-size:15px;
+color:#888;
+border-top: 1px solid rgba(255,255,255,0.05);
 }
 
+/* პატარა ტელეფონებისთვის ფონტის ზომების გასწორება */
+@media (max-width: 480px) {
+    header h1 { font-size: 36px; }
+    header p { font-size: 16px; }
+    .section-title { font-size: 26px; }
+    .gallery { grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); padding: 0 15px; }
+    .gallery img { height: 160px; }
+}
 </style>
 </head>
 
@@ -189,75 +209,49 @@ color:#bbb;
 <h2 class="section-title">📸 ჩვენი ნამუშევრები</h2>
 
 <div class="gallery">
-
-<img src="photo1.jpg">
-<img src="photo2.jpg">
-<img src="photo3.jpg">
-<img src="photo4.jpg">
-<img src="photo5.jpg">
-<img src="photo6.jpg">
-<img src="photo7.jpg">
-<img src="photo8.jpg">
-<img src="photo9.jpg">
-<img src="photo10.jpg">
-<img src="photo11.jpg">
-<img src="photo12.jpg">
-<img src="photo13.jpg">
-<img src="photo14.jpg">
-
+<img src="photo1.jpg" alt="რემონტი ბათუმში">
+<img src="photo2.jpg" alt="რემონტი ბათუმში">
+<img src="photo3.jpg" alt="რემონტი ბათუმში">
+<img src="photo4.jpg" alt="რემონტი ბათუმში">
+<img src="photo5.jpg" alt="რემონტი ბათუმში">
+<img src="photo6.jpg" alt="რემონტი ბათუმში">
+<img src="photo7.jpg" alt="რემონტი ბათუმში">
+<img src="photo8.jpg" alt="რემონტი ბათუმში">
+<img src="photo9.jpg" alt="რემონტი ბათუმში">
+<img src="photo10.jpg" alt="რემონტი ბათუმში">
+<img src="photo11.jpg" alt="რემონტი ბათუმში">
+<img src="photo12.jpg" alt="რემონტი ბათუმში">
+<img src="photo13.jpg" alt="რემონტი ბათუმში">
+<img src="photo14.jpg" alt="რემონტი ბათუმში">
 </div>
 
-<h2 class="section-title">🎬 ვიდეო</h2>
+<h2 class="section-title">🎬 ვიდეო მიმოხილვა</h2>
 
 <div class="video-box">
-<video controls autoplay muted loop>
+<video controls autoplay muted loop playsinline>
 <source src="video.mp4" type="video/mp4">
 </video>
 </div>
 
-<h2 class="section-title">📞 კონტაქტი</h2>
+<h2 class="section-title">📞 დაგვიკავშირდით</h2>
 
 <div class="socials">
-
-<a class="call" href="tel:+995599759795">
-📞 დარეკვა
-</a>
-
-<a class="whatsapp" href="https://wa.me/995599759795">
-💬 WhatsApp
-</a>
-
-<a class="viber" href="viber://chat?number=%2B995599759795">
-📱 Viber
-</a>
-
-<a class="telegram" href="https://t.me/godsongroup">
-✈ Telegram
-</a>
-
-<a class="instagram" href="https://instagram.com/godsongroup">
-📸 Instagram
-</a>
-
-<a class="facebook" href="https://facebook.com/godsongroup">
-📘 Facebook
-</a>
-
-<a class="tiktok" href="https://tiktok.com/@godsongroup">
-🎵 TikTok
-</a>
-
+<a class="call" href="tel:+995599759795">📞 დარეკვა</a>
+<a class="whatsapp" href="https://wa.me/995599759795">💬 WhatsApp</a>
+<a class="viber" href="viber://contact?number=%2B995599759795">📱 Viber</a>
+<a class="telegram" href="https://t.me/godsongroup">✈ Telegram</a>
+<a class="instagram" href="https://instagram.com/godsongroup">📸 Instagram</a>
+<a class="facebook" href="https://facebook.com/godsongroup">📘 Facebook</a>
+<a class="tiktok" href="https://tiktok.com/@godsongroup">🎵 TikTok</a>
 </div>
 
 <footer>
-© GODSON GROUP 2026
+© GODSON GROUP 2026 • ყველა უფლება დაცულია
 </footer>
 
 </div>
 
-<a class="floating" href="https://wa.me/995599759795">
-💬
-</a>
+<a class="floating" href="https://wa.me/995599759795">💬</a>
 
 </body>
 </html>
