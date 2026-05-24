@@ -6,7 +6,59 @@
     <title>GODSON GROUP - Luxury Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        :root { --gold: #d4af37; --black: #0a0a0a; }
+        :root { --gold: #d4af37; --black: #0a0a0a; }<!-- FLOATING BUTTONS -->
+
+<a href="https://wa.me/995599759795" class="float whatsapp">
+💬
+</a>
+
+<a href="tel:+995599759795" class="float phone">
+📞
+</a>
+
+<style>
+
+.float{
+position:fixed;
+right:20px;
+width:65px;
+height:65px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:34px;
+text-decoration:none;
+color:white;
+box-shadow:0 0 20px rgba(0,0,0,0.5);
+z-index:999;
+animation:pulse 2s infinite;
+}
+
+.whatsapp{
+bottom:100px;
+background:#25D366;
+}
+
+.phone{
+bottom:20px;
+background:#d4af37;
+color:black;
+}
+
+@keyframes pulse{
+0%{
+transform:scale(1);
+}
+50%{
+transform:scale(1.1);
+}
+100%{
+transform:scale(1);
+}
+}
+
+</style>
         body { font-family: 'Montserrat', sans-serif; background-color: var(--black); color: white; margin: 0; padding: 20px; text-align: center; }
         h1 { color: var(--gold); font-family: 'Playfair Display', serif; margin-bottom: 30px; }
         h2 { color: var(--gold); margin-top: 40px; margin-bottom: 20px; }
