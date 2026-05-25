@@ -1,86 +1,491 @@
 <!DOCTYPE html>
 <html lang="ka">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GODSON GROUP - Luxury Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        :root { --gold: #d4af37; --black: #0a0a0a; }
-        body { font-family: 'Montserrat', sans-serif; background-color: var(--black); color: white; margin: 0; padding: 0; }
-        .container { max-width: 1000px; margin: 0 auto; padding: 20px; text-align: center; }
-        
-        h1 { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 45px; margin: 50px 0 10px; }
-        .subtitle { font-size: 18px; letter-spacing: 3px; color: #ccc; margin-bottom: 40px; }
-        .section-title { color: var(--gold); margin: 50px 0 25px; text-transform: uppercase; letter-spacing: 2px; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GODSON GROUP</title>
 
-        /* გალერეა */
-        .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
-        .gallery img { width: 100%; height: 150px; object-fit: cover; border-radius: 10px; cursor: pointer; border: 1px solid var(--gold); transition: 0.3s; }
-        .gallery img:hover { transform: scale(1.05); }
+<style>
 
-        /* ვიდეოები */
-        .video-container { display: flex; flex-wrap: wrap; gap: 15px; justify-content: center; }
-        .video-box { width: 300px; border: 2px solid var(--gold); border-radius: 10px; overflow: hidden; background: #000; }
-        video { width: 100%; display: block; }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
 
-        /* კონტაქტი */
-        .socials { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; max-width: 500px; margin: 40px auto; }
-        .btn { padding: 15px; border-radius: 10px; color: white; text-decoration: none; font-weight: bold; background: #222; }
-        .btn-gold { background: var(--gold); color: black; }
+body{
+background:url('bg.png');
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+color:white;
+text-align:center;
+}
 
-        /* მოდალი */
-        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); justify-content: center; align-items: center; z-index: 1000; }
-        .modal img { max-width: 90%; max-height: 80%; border: 3px solid var(--gold); }
-    </style>
+.overlay{
+background:rgba(0,0,0,0.85);
+min-height:100vh;
+padding-bottom:60px;
+}
+
+header{
+padding:60px 20px;
+}
+
+header h1{
+font-size:58px;
+color:#d4af37;
+text-shadow:0 0 20px gold;
+margin-bottom:15px;
+}
+
+header p{
+font-size:24px;
+color:#ddd;
+line-height:1.6;
+}
+
+.section-title{
+font-size:42px;
+margin:45px 0 25px;
+color:#d4af37;
+text-shadow:0 0 12px gold;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+gap:15px;
+padding:20px;
+}
+
+.gallery img{
+width:100%;
+height:240px;
+object-fit:cover;
+border-radius:24px;
+border:3px solid #d4af37;
+transition:0.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+box-shadow:0 0 25px gold;
+}
+
+.video-box{
+padding:20px;
+}
+
+.video-box video{
+width:95%;
+border-radius:25px;
+border:3px solid #d4af37;
+margin-bottom:25px;
+background:black;
+}
+
+.youtube-frame{
+padding:20px;
+}
+
+.youtube-frame iframe{
+width:95%;
+height:260px;
+border-radius:25px;
+border:3px solid #ff0000;
+}
+
+.shop{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+padding:20px;
+}
+
+.product{
+background:#111;
+border:2px solid #d4af37;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 0 20px rgba(212,175,55,0.4);
+}
+
+.product img{
+width:100%;
+height:260px;
+object-fit:cover;
+}
+
+.product-content{
+padding:20px;
+}
+
+.product h3{
+font-size:30px;
+color:#d4af37;
+margin-bottom:12px;
+}
+
+.product p{
+font-size:18px;
+line-height:1.6;
+color:#ddd;
+}
+
+.price{
+font-size:30px;
+margin:20px 0;
+font-weight:bold;
+color:#d4af37;
+text-shadow:0 0 10px gold;
+}
+
+.order-btn{
+display:block;
+padding:15px;
+background:#25D366;
+border-radius:14px;
+text-decoration:none;
+font-size:22px;
+font-weight:bold;
+color:white;
+margin-bottom:12px;
+}
+
+.call-btn{
+display:block;
+padding:15px;
+background:#d4af37;
+border-radius:14px;
+text-decoration:none;
+font-size:22px;
+font-weight:bold;
+color:black;
+}
+
+.socials{
+padding:20px;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.socials a{
+text-decoration:none;
+padding:18px;
+border-radius:18px;
+font-size:24px;
+font-weight:bold;
+color:white;
+transition:0.3s;
+display:block;
+}
+
+.socials a:hover{
+transform:scale(1.05);
+}
+
+.call{
+background:#9c7440;
+}
+
+.whatsapp{
+background:#25D366;
+}
+
+.viber{
+background:#7360F2;
+}
+
+.telegram{
+background:#229ED9;
+}
+
+.instagram{
+background:#E1306C;
+}
+
+.facebook{
+background:#1877F2;
+}
+
+.youtube{
+background:#ff0000;
+}
+
+.tiktok{
+background:black;
+border:2px solid white;
+}
+
+.float{
+position:fixed;
+right:20px;
+width:70px;
+height:70px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:36px;
+text-decoration:none;
+z-index:999;
+box-shadow:0 0 20px rgba(0,0,0,0.5);
+animation:pulse 2s infinite;
+}
+
+.float-whatsapp{
+bottom:100px;
+background:#25D366;
+color:white;
+}
+
+.float-phone{
+bottom:20px;
+background:#d4af37;
+color:black;
+}
+
+@keyframes pulse{
+0%{transform:scale(1);}
+50%{transform:scale(1.1);}
+100%{transform:scale(1);}
+}
+
+footer{
+margin-top:40px;
+padding:20px;
+font-size:18px;
+color:#bbb;
+}
+
+</style>
 </head>
+
 <body>
 
-<div class="container">
-    <h1>GODSON GROUP</h1>
-    <p class="subtitle">სრული რემონტი • დიზაინი • მშენებლობა</p>
+<div class="overlay">
 
-    <h2 class="section-title">📸 ჩვენი ნამუშევრები</h2>
-    <div class="gallery">
-        <img src="photo1.jpg" onclick="openModal(this.src)">
-        <img src="photo2.jpg" onclick="openModal(this.src)">
-        <img src="photo3.jpg" onclick="openModal(this.src)">
-        <img src="photo4.jpg" onclick="openModal(this.src)">
-        <img src="photo5.jpg" onclick="openModal(this.src)">
-        <img src="photo6.jpg" onclick="openModal(this.src)">
-        <img src="photo7.jpg" onclick="openModal(this.src)">
-        <img src="photo8.jpg" onclick="openModal(this.src)">
-    </div>
+<header>
 
-    <h2 class="section-title">🎬 ვიდეო მიმოხილვები</h2>
-    <div class="video-container">
-        <div class="video-box"><video controls><source src="video11.mp4" type="video/mp4"></video></div>
-        <div class="video-box"><video controls><source src="video12.mp4" type="video/mp4"></video></div>
-        <div class="video-box"><video controls><source src="video13.mp4" type="video/mp4"></video></div>
-        <div class="video-box"><video controls><source src="video14.mp4" type="video/mp4"></video></div>
-        <div class="video-box"><video controls><source src="video15.mp4" type="video/mp4"></video></div>
-        <div class="video-box"><video controls><source src="video16.mp4" type="video/mp4"></video></div>
-        <div class="video-box"><video controls><source src="video17.mp4" type="video/mp4"></video></div>
-        <div class="video-box"><video controls><source src="video18.mp4" type="video/mp4"></video></div>
-        <div class="video-box"><video controls><source src="video19.mp4" type="video/mp4"></video></div>
-    </div>
+<h1>GODSON GROUP</h1>
 
-    <h2 class="section-title">📞 დაგვიკავშირდით</h2>
-    <div class="socials">
-        <a href="tel:+995599759795" class="btn btn-gold">📞 დარეკვა</a>
-        <a href="https://wa.me/995599759795" class="btn">💬 WhatsApp</a>
-    </div>
+<p>
+სრული რემონტი • დიზაინი • მშენებლობა
+</p>
+
+</header>
+
+<h2 class="section-title">
+📸 ჩვენი ნამუშევრები
+</h2>
+
+<div class="gallery">
+
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+<img src="photo4.jpg">
+<img src="photo5.jpg">
+<img src="photo6.jpg">
+<img src="photo7.jpg">
+<img src="photo8.jpg">
+<img src="photo9.jpg">
+<img src="photo10.jpg">
+<img src="photo11.jpg">
+<img src="photo12.jpg">
+<img src="photo13.jpg">
+<img src="photo14.jpg">
+
 </div>
 
-<div id="modal" class="modal" onclick="closeModal()">
-    <img id="modal-img">
+<h2 class="section-title">
+🎬 ვიდეოები
+</h2>
+
+<div class="video-box">
+
+<video controls playsinline preload="metadata">
+<source src="video1.mp4" type="video/mp4">
+</video>
+
+<video controls playsinline preload="metadata">
+<source src="video2.mp4" type="video/mp4">
+</video>
+
 </div>
 
-<script>
-    function openModal(src) { document.getElementById('modal').style.display = 'flex'; document.getElementById('modal-img').src = src; }
-    function closeModal() { document.getElementById('modal').style.display = 'none'; }
-</script>
+<h2 class="section-title">
+▶ YouTube
+</h2>
+
+<div class="youtube-frame">
+
+<iframe
+src="https://www.youtube.com/embed?listType=user_uploads&list=godsongroup"
+title="YouTube video player"
+frameborder="0"
+allowfullscreen>
+</iframe>
+
+</div>
+
+<h2 class="section-title">
+🛒 ონლაინ მაღაზია
+</h2>
+
+<div class="shop">
+
+<div class="product">
+
+<img src="product1.jpg">
+
+<div class="product-content">
+
+<h3>სამზარეულოს დიზაინი</h3>
+
+<p>
+პრემიუმ ხარისხის სამზარეულოს დიზაინი და სრული რემონტი
+</p>
+
+<div class="price">
+კვადრატის ფასი — 450 ₾
+</div>
+
+<a class="order-btn"
+href="https://wa.me/995599759795">
+📲 WhatsApp შეკვეთა
+</a>
+
+<a class="call-btn"
+href="tel:+995599759795">
+📞 დარეკვა
+</a>
+
+</div>
+</div>
+
+<div class="product">
+
+<img src="product2.jpg">
+
+<div class="product-content">
+
+<h3>აბაზანის რემონტი</h3>
+
+<p>
+აბაზანის სრული რემონტი თანამედროვე დიზაინით
+</p>
+
+<div class="price">
+კვადრატის ფასი — 450 ₾
+</div>
+
+<a class="order-btn"
+href="https://wa.me/995599759795">
+📲 WhatsApp შეკვეთა
+</a>
+
+<a class="call-btn"
+href="tel:+995599759795">
+📞 დარეკვა
+</a>
+
+</div>
+</div>
+
+<div class="product">
+
+<img src="product3.jpg">
+
+<div class="product-content">
+
+<h3>მისაღების დიზაინი</h3>
+
+<p>
+ლუქს კლასის მისაღების დიზაინი და მოწყობა
+</p>
+
+<div class="price">
+კვადრატის ფასი — 450 ₾
+</div>
+
+<a class="order-btn"
+href="https://wa.me/995599759795">
+📲 WhatsApp შეკვეთა
+</a>
+
+<a class="call-btn"
+href="tel:+995599759795">
+📞 დარეკვა
+</a>
+
+</div>
+</div>
+
+</div>
+
+<h2 class="section-title">
+📞 კონტაქტი
+</h2>
+
+<div class="socials">
+
+<a class="call" href="tel:+995599759795">
+📞 დარეკვა — 599 759 795
+</a>
+
+<a class="whatsapp" href="https://wa.me/995599759795">
+💬 WhatsApp — 599 759 795
+</a>
+
+<a class="viber" href="viber://chat?number=%2B995599759795">
+📱 Viber — 599 759 795
+</a>
+
+<a class="telegram" href="https://t.me/godsongroup">
+✈ Telegram — @godsongroup
+</a>
+
+<a class="instagram"
+href="https://www.instagram.com/rm.build.group?igsh=MTJ6dXpsOWtnYjh1Mw==">
+📸 Instagram
+</a>
+
+<a class="facebook"
+href="https://www.facebook.com/share/1BFNErVzEz/">
+📘 Facebook
+</a>
+
+<a class="youtube"
+href="https://youtube.com/@godsongroup?si=H8vXZ1ZkKP0sAxIY">
+▶ YouTube
+</a>
+
+<a class="tiktok"
+href="https://www.tiktok.com/@rmremont?_r=1&_t=ZS-96aTj6ZzuWi">
+🎵 TikTok
+</a>
+
+</div>
+
+<footer>
+© GODSON GROUP 2026
+</footer>
+
+</div>
+
+<a href="https://wa.me/995599759795"
+class="float float-whatsapp">
+💬
+</a>
+
+<a href="tel:+995599759795"
+class="float float-phone">
+📞
+</a>
 
 </body>
 </html>
